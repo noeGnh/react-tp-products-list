@@ -13,6 +13,8 @@ import type { InputProps } from '../../types'
  */
 function Input({
   id,
+  max,
+  min,
   type,
   value,
   setValue,
@@ -31,6 +33,8 @@ function Input({
           'p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:border-gray-500 ' +
           className
         }
+        max={max}
+        min={min}
       />
     </>
   )

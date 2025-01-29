@@ -34,6 +34,8 @@ export interface CategoryProductsProps {
 
 export interface InputProps {
   id: string
+  min?: number
+  max?: number
   type: 'number' | 'text'
   value: string | number
   setValue: (e: React.ChangeEvent<HTMLInputElement>) => void

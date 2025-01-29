@@ -71,6 +71,7 @@ function Filters({
             setValue={handleMinPrice}
             type="number"
             className="w-full"
+            min={0}
           />
         </div>
         <div className="w-1/2">
@@ -84,6 +85,7 @@ function Filters({
             setValue={handleMaxPrice}
             type="number"
             className="w-full"
+            min={minPrice}
           />
         </div>
       </div>
