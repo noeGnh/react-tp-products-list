@@ -57,14 +57,14 @@ function Container() {
 
   return (
     <>
-      <div className="absolute top-0 w-full h-[75px] bg-slate-200 flex items-center justify-center">
+      <div className="absolute top-0 w-full h-[75px] bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
         <h1>TP React: Liste de produits</h1>
       </div>
       <div
         id="container"
         className="w-full h-screen flex items-center justify-center"
       >
-        <div className="py-5 px-10 bg-slate-200 rounded-md">
+        <div className="py-5 px-10 bg-slate-200 dark:bg-slate-700 rounded-md">
           <Filters
             searchValue={searchValue}
             setSearchValue={setSearchValue}

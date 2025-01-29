@@ -46,7 +46,7 @@ function Table({
                   >
                     <td
                       colSpan={2}
-                      className="bg-slate-300 py-1 rounded-md text-center"
+                      className="bg-slate-300 dark:bg-slate-800 py-1 rounded-md text-center"
                     >
                       {category}
                     </td>
@@ -69,7 +69,9 @@ function Table({
 }
 
 function Th({ children }: { children: React.ReactNode }) {
-  return <th className="bg-white rounded-md py-1">{children}</th>
+  return (
+    <th className="bg-white dark:bg-slate-900 rounded-md py-1">{children}</th>
+  )
 }
 
 export default Table
