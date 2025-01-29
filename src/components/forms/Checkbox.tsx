@@ -1,6 +1,15 @@
 import type { CheckboxProps } from '../../types'
 
-function Checkbox({ checked, setChecked, label }: CheckboxProps) {
+/**
+ * A checkbox component that displays a labeled checkbox.
+ *
+ * @param {boolean} checked - Determines if the checkbox is checked.
+ * @param {(e: React.ChangeEvent<HTMLInputElement>) => void} setChecked - Handler to update the checked state.
+ * @param {string} label - The label displayed next to the checkbox.
+ * @returns {JSX.Element} A checkbox input with a label.
+ */
+
+function Checkbox({ checked, setChecked, label }: CheckboxProps): JSX.Element {
   return (
     <>
       <input

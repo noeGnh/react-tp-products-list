@@ -1,11 +1,25 @@
 import type { ButtonProps } from '../types'
 
+/**
+ * A basic button component.
+ *
+ * @example
+ * <Button onClick={() => console.log("Button clicked")}>
+ *   Click me
+ * </Button>
+ *
+ * @param {React.ReactNode} children - The content of the button
+ * @param {string} [className] - Additional CSS classes to apply to the button
+ * @param {(() => void)} [onClick] - A callback function to call when the button is clicked
+ * @param {'button' | 'submit'} [type=button] - The type of the button
+ * @returns {JSX.Element} A button element
+ */
 function Button({
   children,
   className,
   onClick,
   type = 'button',
-}: ButtonProps) {
+}: ButtonProps): JSX.Element {
   return (
     <button
       onClick={onClick}

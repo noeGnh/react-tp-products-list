@@ -6,6 +6,31 @@ import { PRODUCTS } from '../utils'
 import Filters from './Filters'
 import Table from './Table'
 
+/**
+ * Container is the main component of the application. It displays the header,
+ * the filters form, the table with the products, and a button to clear the
+ * filters.
+ *
+ * The state of the component is composed of four values:
+ * - `minPrice`: the minimum price of the products to display,
+ *   initialized to 0.
+ * - `maxPrice`: the maximum price of the products to display,
+ *   initialized to 0.
+ * - `searchValue`: the value of the search input,
+ *   initialized to an empty string.
+ * - `onlyInStock`: a boolean indicating whether to only display products
+ *   that are in stock, initialized to false.
+ *
+ * The component also defines three functions:
+ * - `clearFilters`: resets the state of the component to its initial value.
+ * - `isClearFiltersButtonVisible`: returns a boolean indicating whether the
+ *   button to clear the filters should be visible.
+ *
+ * The component renders a header with the title of the application, a form
+ * with the filters, a table with the products, and a button to clear the
+ * filters. The button is only visible if at least one of the filters is not
+ * in its initial state.
+ */
 function Container() {
   const [minPrice, setMinPrice] = useState(0)
   const [maxPrice, setMaxPrice] = useState(0)
