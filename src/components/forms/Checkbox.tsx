@@ -1,12 +1,6 @@
-function Checkbox({
-  checked,
-  setChecked,
-  label,
-}: {
-  checked: boolean
-  setChecked: (e: React.ChangeEvent<HTMLInputElement>) => void
-  label: string
-}) {
+import type { CheckboxProps } from '../../types'
+
+function Checkbox({ checked, setChecked, label }: CheckboxProps) {
   return (
     <>
       <input

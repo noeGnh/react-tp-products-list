@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import CategoryProducts from './CategoryProducts'
+import type { TableProps } from '../types'
 
 function Table({
   categories,
@@ -7,13 +8,7 @@ function Table({
   maxPrice,
   searchValue,
   onlyInStock,
-}: {
-  categories: string[]
-  minPrice: number
-  maxPrice: number
-  searchValue: string
-  onlyInStock: boolean
-}) {
+}: TableProps) {
   return (
     <>
       <table className="w-full">

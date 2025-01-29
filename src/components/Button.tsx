@@ -1,14 +1,11 @@
+import type { ButtonProps } from '../types'
+
 function Button({
   children,
   className,
   onClick,
   type = 'button',
-}: {
-  children: React.ReactNode
-  className?: string
-  onClick?: () => void
-  type?: 'button' | 'submit'
-}) {
+}: ButtonProps) {
   return (
     <button
       onClick={onClick}

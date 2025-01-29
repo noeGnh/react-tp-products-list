@@ -1,25 +1,33 @@
 import Checkbox from '../components/forms/Checkbox'
 import Input from '../components/forms/Input'
+import type { FiltersProps } from '../types'
 
 function Filters({
   searchValue,
-  handleSearchValue,
+  setSearchValue,
   minPrice,
-  handleMinPrice,
+  setMinPrice,
   maxPrice,
-  handleMaxPrice,
+  setMaxPrice,
   onlyInStock,
-  handleOnlyInStock,
-}: {
-  searchValue: string
-  handleSearchValue: (e: React.ChangeEvent<HTMLInputElement>) => void
-  minPrice: number
-  handleMinPrice: (e: React.ChangeEvent<HTMLInputElement>) => void
-  maxPrice: number
-  handleMaxPrice: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onlyInStock: boolean
-  handleOnlyInStock: (e: React.ChangeEvent<HTMLInputElement>) => void
-}) {
+  setOnlyInStock,
+}: FiltersProps) {
+  const handleMinPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMinPrice(parseInt(event.target.value))
+  }
+
+  const handleMaxPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setMaxPrice(parseInt(event.target.value))
+  }
+
+  const handleSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchValue(event.target.value)
+  }
+
+  const handleOnlyInStock = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setOnlyInStock(event.target.checked)
+  }
+
   return (
     <>
       <div>

@@ -1,3 +1,5 @@
+import type { InputProps } from '../../types'
+
 function Input({
   id,
   type,
@@ -5,14 +7,7 @@ function Input({
   setValue,
   placeholder,
   className = '',
-}: {
-  id: string
-  type: 'number' | 'text'
-  value: string | number
-  setValue: (e: React.ChangeEvent<HTMLInputElement>) => void
-  placeholder: string
-  className: string
-}) {
+}: InputProps) {
   return (
     <>
       <input

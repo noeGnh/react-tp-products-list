@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { Product } from '../types'
+import type { CategoryProductsProps, Product } from '../types'
 import { CURRENCY, PRODUCTS } from '../utils'
 
 function CategoryProducts({
@@ -8,13 +8,7 @@ function CategoryProducts({
   maxPrice,
   searchValue,
   onlyInStock,
-}: {
-  category: string
-  minPrice: number
-  maxPrice: number
-  searchValue: string
-  onlyInStock: boolean
-}) {
+}: CategoryProductsProps) {
   const filteredProducts = () => {
     let products: Product[] = PRODUCTS.filter(
       (product) => product.category === category

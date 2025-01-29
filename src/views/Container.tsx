@@ -12,22 +12,6 @@ function Container() {
   const [searchValue, setSearchValue] = useState('')
   const [onlyInStock, setOnlyInStock] = useState(false)
 
-  const handleMinPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMinPrice(parseInt(event.target.value))
-  }
-
-  const handleMaxPrice = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setMaxPrice(parseInt(event.target.value))
-  }
-
-  const handleSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchValue(event.target.value)
-  }
-
-  const handleOnlyInStock = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setOnlyInStock(event.target.checked)
-  }
-
   const clearFilters = () => {
     setMinPrice(0)
     setMaxPrice(0)
@@ -58,13 +42,13 @@ function Container() {
         <div className="py-5 px-10 bg-slate-200 rounded-md">
           <Filters
             searchValue={searchValue}
-            handleSearchValue={handleSearchValue}
+            setSearchValue={setSearchValue}
             minPrice={minPrice}
-            handleMinPrice={handleMinPrice}
+            setMinPrice={setMinPrice}
             maxPrice={maxPrice}
-            handleMaxPrice={handleMaxPrice}
+            setMaxPrice={setMaxPrice}
             onlyInStock={onlyInStock}
-            handleOnlyInStock={handleOnlyInStock}
+            setOnlyInStock={setOnlyInStock}
           />
 
           <div className="mt-5">
